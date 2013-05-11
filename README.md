@@ -1,9 +1,12 @@
 clip2qr
 =======
 
-Grabs the contents of the X clipboard, generates a QR code image and displays it for immediate use.
+Grabs the contents of the X clipboard, generates a QR code image and displays it for 
+immediate use. Main usecase: get a URL or some text snippet to your smartphone.
+You need to have an app installed on your smartphone that can read QR Codes (e.g. QRDroid).
 
-There are no options. Save the clip2qr.sh file somewhere, make it executable and somehow register it in your Desktop Environment.
+There are no options. Save the clip2qr.sh file somewhere, make it executable and somehow 
+register it in your Desktop Environment.
  * You might register it to run on a keyboard shortcut, e.g. Ctrl-B.
  * You might assign a starter icon on your panel to this script.
  * Or you might find a completely different method to invoke this script.
