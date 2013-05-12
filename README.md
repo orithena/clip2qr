@@ -11,16 +11,28 @@ register it in your Desktop Environment.
  * You might assign a starter icon on your panel to this script.
  * Or you might find a completely different method to invoke this script.
 
-Install
--------
-
-    $ wget https://raw.github.com/orithena/clip2qr/master/clip2qr.sh -O /tmp/clip2qr.sh
-    $ sudo cp /tmp/clip2qr.sh /usr/local/bin
-    $ sudo chmod +x /usr/local/bin/clip2qr.sh
-
 Dependencies
 ------------
 
 On Ubuntu, the following packages need to be installed: python, python-tk, qrencode, xclip.
 
     $ sudo apt-get install python python-tk qrencode xclip
+
+Install
+-------
+
+Start a terminal and type the following commands:
+
+    $ wget https://raw.github.com/orithena/clip2qr/master/clip2qr.sh -O /tmp/clip2qr.sh
+    $ sudo cp /tmp/clip2qr.sh /usr/local/bin
+    $ sudo chmod +x /usr/local/bin/clip2qr.sh
+    
+Then decide on a method to run this script and register it in your Desktop Environment.
+For example, locate the "Keyboard Shortcut" preferences dialog and assign a global shortcut 
+to `/usr/local/bin/clip2qr.sh`. Or add a starter to your desktop panel (maybe by right-clicking 
+on it?). You could generate an icon for the starter like this:
+
+    $ sudo qrencode -s 1 -m 1 -o /usr/share/icons/qrcode.png "Clipboard to QR Code"
+    
+Increase the value after -s if you need a bigger icon.
+
