@@ -16,7 +16,7 @@ Dependencies
 
 On Ubuntu, the following packages need to be installed: python, python-tk, qrencode, xclip.
 
-    $ sudo apt-get install python python-tk qrencode xclip
+    $ sudo apt-get install python python-tk python-imaging-tk qrencode xclip
 
 Install
 -------
