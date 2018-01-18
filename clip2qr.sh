@@ -57,7 +57,9 @@ echo "$TXT" > $TMPDIR/content.txt
 
 # Start python interpreter to display the QR code
 python - <<PYEND
-import Tkinter,Image,ImageTk
+import Tkinter
+from PIL import Image
+from PIL import ImageTk
 
 # Pull up a TK window, make it fullscreen and focusable
 tk = Tkinter.Tk()
