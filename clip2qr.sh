@@ -34,14 +34,17 @@ trap 'rm -rf $TMPDIR; exit 1' 0 1 2 3 13 15
 # First, try to convert data from clipboard and push it into tempdir
 
 # check if primary clipboard contains convertible data
-if xclip -o | qrencode -s 2 -m 2 -o - > $TMPDIR/qrcode.png
-then 
-    TXT=$(xclip -o)
+
 
 # check if clipboard contains convertible data
-elif xclip -o -selection clipboard | qrencode -s 2 -m 2 -o - > $TMPDIR/qrcode.png
+
+
+if xclip -o -selection clipboard | qrencode -s 2 -m 2 -o - > $TMPDIR/qrcode.png
 then
-    TXT=$(xclip -o -selection clipboard)
+    TXT=$(xclip -o -selection clipboard)    
+elif xclip -o | qrencode -s 2 -m 2 -o - > $TMPDIR/qrcode.png
+then 
+    TXT=$(xclip -o)     
 
 # no convertible data found -> notify user (maybe you need to insert your notificator of choice here)
 else
