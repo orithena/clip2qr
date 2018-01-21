@@ -23,7 +23,7 @@ Install
 
 Start a terminal and type the following commands:
 
-    $ wget https://raw.github.com/orithena/clip2qr/master/clip2qr.sh -O /tmp/clip2qr.sh
+    $ wget https://raw.githubusercontent.com/AvatarBlueray/clip2qr-1/master/clip2qr.sh -O /tmp/clip2qr.sh
     $ sudo cp /tmp/clip2qr.sh /usr/local/bin
     $ sudo chmod +x /usr/local/bin/clip2qr.sh
     
